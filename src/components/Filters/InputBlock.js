@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const InputBlock = ({ name, value, type, placeholder, onChange }) => {
  return (
@@ -12,6 +13,17 @@ const InputBlock = ({ name, value, type, placeholder, onChange }) => {
        placeholder={placeholder} />
    </div>
  )
+};
+
+InputBlock.propTypes = {
+  name: PropTypes.string,
+  value: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.number,
+  ]),
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+  onChange: PropTypes.func
 };
 
 export default InputBlock;

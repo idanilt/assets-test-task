@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import CONST from '../../CONST'
 import { applyFilters, resetFilters } from '../../actions'
@@ -73,6 +74,12 @@ class Filters extends PureComponent {
     )
   }
 }
+
+Filters.propTypes = {
+  filters: PropTypes.object,
+  applyFilters: PropTypes.func,
+  resetFilters: PropTypes.func
+};
 
 const mapStateToProps = state => ({
   filters: state.filters

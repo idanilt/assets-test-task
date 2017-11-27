@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react'
+import PropTypes from 'prop-types'
 
 export default class Asset extends PureComponent {
   constructor(props) {
@@ -25,3 +26,12 @@ export default class Asset extends PureComponent {
     )
   }
 }
+
+Asset.propTypes = {
+  id: PropTypes.number,
+  assetName: PropTypes.string,
+  price: PropTypes.number,
+  lastUpdate: PropTypes.number,
+  type: PropTypes.string,
+  addedToFav: PropTypes.number
+};

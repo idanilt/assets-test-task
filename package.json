@@ -27,6 +27,7 @@
   "dependencies": {
     "babel-preset-stage-1": "^6.1.18",
     "lodash": "^4.17.4",
+    "prop-types": "^15.6.0",
     "react": "^15.6.1",
     "react-dom": "^15.3.2",
     "react-redux": "4.3.0",

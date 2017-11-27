@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
 import Filters from './Filters/FiltersIndex'
 import Assets from './Assets/AssetsIndex'
@@ -25,6 +26,10 @@ class App extends PureComponent {
     );
   }
 }
+
+App.propTypes = {
+  addAsset: PropTypes.func
+};
 
 const mapActionsToProps = dispatch => ({
   addAsset: asset => dispatch((addAsset(asset))),

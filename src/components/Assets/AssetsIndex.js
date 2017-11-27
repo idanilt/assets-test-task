@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react'
 import { connect } from 'react-redux'
+import PropTypes from 'prop-types'
 
-import Asset from '../Asset'
+import Asset from './Asset'
 import { sortBy, toggleFav } from '../../actions'
 import CONST from '../../CONST'
 import { filterAssets, sortAssets } from '../../helpers'
@@ -79,6 +80,14 @@ class Assets extends PureComponent {
     );
   }
 }
+
+Assets.propTypes = {
+  assets: PropTypes.array,
+  filters: PropTypes.object,
+  sorting: PropTypes.object,
+  sortBy: PropTypes.func,
+  toggleFav: PropTypes.func
+};
 
 const mapStateToProps = state => ({
   assets: state.assets,
