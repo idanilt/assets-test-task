@@ -10,5 +10,32 @@ export default {
     PRICE: 'price',
     LAST_UPDATE: 'lastUpdate',
     TYPE: 'type'
-  }
+  },
+  FILTERS: [
+    {
+      name: 'id',
+      type: 'number',
+      placeholder: 'Id'
+    },
+    {
+      name: 'assetName',
+      type: 'text',
+      placeholder: 'Name'
+    },
+    {
+      name: 'price',
+      type: 'number',
+      placeholder: 'Price'
+    },
+    {
+      name: 'lastUpdate',
+      type: 'number',
+      placeholder: 'Last Update'
+    },
+    {
+      name: 'type',
+      type: 'text',
+      placeholder: 'Type'
+    }
+  ]
 }

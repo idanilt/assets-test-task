@@ -1,20 +1,16 @@
-import React from 'react'
+import React, { PureComponent } from 'react'
 
-export default class Asset extends React.PureComponent {
+export default class Asset extends PureComponent {
   constructor(props) {
-    super();
+    super(props);
   }
 
-  // shouldComponentUpdate(nextProps) {
-  //   if (nextProps.lastUpdate !== this.props.lastUpdate || nextProps.price !== this.props.price) {
-  //     return true;
-  //   }
-  //
-  //   return false;
-  // }
+  toggleFav = () => {
+    this.props.toggleFav(this.props.id);
+  }
 
   render() {
-    const { id, assetName, price, lastUpdate, type } = this.props;
+    const { id, assetName, price, lastUpdate, type, addedToFav } = this.props;
     return (
       <tr>
         <td>{id}</td>
@@ -22,6 +18,9 @@ export default class Asset extends React.PureComponent {
         <td>{price}</td>
         <td>{lastUpdate}</td>
         <td>{type}</td>
+        <td onClick={this.toggleFav}>
+          <i className={`fa fa-heart ${addedToFav ? 'active' : ''}`} aria-hidden="true"></i>
+        </td>
       </tr>
     )
   }

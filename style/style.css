@@ -1,0 +1,25 @@
+.filters {
+    margin-bottom: 20px;
+}
+
+.filters__form {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.filters__form > * {
+    flex-basis: calc(50% - 10px);
+}
+
+.filters__buttons {
+    flex-basis: 100%;
+}
+
+.filters__buttons > .btn {
+    margin-right: 10px;
+}
+
+.fa-heart.active {
+    color: red;
+}
